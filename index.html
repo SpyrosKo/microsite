@@ -1,83 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spiridon Konofaos — WordPress Diagnostics & Small Fixes</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spiridon Konofaos — WordPress Diagnostics & Small Fixes</title>
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Spiridon Konofaos</h1>
+      <p class="subtitle">WordPress Diagnostics & Small Fixes</p>
+    </header>
 
-  <header>
-    <h1>Spiridon Konofaos</h1>
-    <p class="subtitle">WordPress Diagnostics & Small Fixes</p>
-  </header>
+    <main>
+      <!-- Hero section  -->
+      <div id="hero">
+        <section id="intro">
+          <p>
+            If your WordPress site feels slow, looks off, or something just
+            isn’t working right, I help you figure out what’s going on — and fix
+            it without the drama. Clear communication, steady pace, no
+            upselling.
+          </p>
+        </section>
+      </div>
 
-  <section id="intro">
-    <p>If your WordPress site feels slow, looks off, or something just isn’t working right, I help you figure out what’s going on — and fix it without the drama. Clear communication, steady pace, no upselling.</p>
-  </section>
+      <!-- Diagnostics  -->
+      <section id="services">
+        <h2>Services & Pricing</h2>
+        <div class="service">
+          <h3>Website Diagnostic — $50</h3>
+        <div class="icon-wrapper">
+          <svg class="icon">
+            <use href="/icons/icons.svg#radar"></use>
+          </svg>
+        </div>
+          <p>
+            I take a close look at your WordPress setup and pinpoint the issue.
+            You’ll get a simple, plain‑English summary and your options. You’re
+            never pressured to hire me for the fix.
+          </p>
+        </div>
 
-  <section id="services">
-    <h2>Services & Pricing</h2>
+        <!-- Small fixes  -->
+        <div class="service">
+          <div class="icon-wrapper">
+            <svg class="icon">
+              <use href="/icons/icons.svg#wrench"></use>
+            </svg>
+          </div>
+          <h3>Small Fixes — $75–$150</h3>
+          <p>
+            Good for layout glitches, broken sections, mobile issues, plugin
+            settings, and small styling adjustments.
+          </p>
+        </div>
 
-    <div class="service">
-      <h3>Website Diagnostic — $50</h3>
-      <p>I take a close look at your WordPress setup and pinpoint the issue. You’ll get a simple, plain‑English summary and your options. You’re never pressured to hire me for the fix.</p>
-    </div>
+        <!-- Medium fixes  -->
+        <div class="service">
+          <div class="icon-wrapper">
+            <svg class="icon">
+              <use href="/icons/icons.svg#settings"></use>
+            </svg>
+          </div>
 
-    <div class="service">
-      <h3>Small Fixes — $75–$150</h3>
-      <p>Good for layout glitches, broken sections, mobile issues, plugin settings, and small styling adjustments.</p>
-    </div>
+          <h3>Medium Fixes — $150–$300</h3>
+          <p>
+            For homepage cleanup, multiple section fixes, speed improvements,
+            plugin conflicts, and general front‑end polish.
+          </p>
+        </div>
+      </section>
 
-    <div class="service">
-      <h3>Medium Fixes — $150–$300</h3>
-      <p>For homepage cleanup, multiple section fixes, speed improvements, plugin conflicts, and general front‑end polish.</p>
-    </div>
-  </section>
+      <!-- Process  -->
+      <section id="process">
+        <h2>How It Works</h2>
+        <ol>
+          <li>You send me your website and describe the issue.</li>
+          <li>I review everything and send you a diagnostic.</li>
+          <li>You decide if you want me to handle the fix.</li>
+          <li>I work at a calm, steady pace and keep things simple.</li>
+        </ol>
+      </section>
 
-  <section id="process">
-    <h2>How It Works</h2>
-    <ol>
-      <li>You send me your website and describe the issue.</li>
-      <li>I review everything and send you a diagnostic.</li>
-      <li>You decide if you want me to handle the fix.</li>
-      <li>I work at a calm, steady pace and keep things simple.</li>
-    </ol>
-  </section>
+      <!-- Communication -->
+      <section id="communication">
+        <h2>Communication</h2>
+        <p>
+          I work through email only. It keeps everything clear, organized, and
+          distraction‑free.
+        </p>
+      </section>
 
-  <section id="communication">
-    <h2>Communication</h2>
-    <p>I work through email only. It keeps everything clear, organized, and distraction‑free.</p>
-  </section>
+      <!-- Platforms I work with  -->
+      <section id="nonwp">
+        <h2>Platforms I Work With</h2>
+        <p>
+          I specialize in WordPress and Elementor. That’s where I can diagnose
+          issues quickly and give accurate fixes. If your site uses another
+          platform, it’s better to work with someone who focuses on that system.
+        </p>
+      </section>
 
-  <section id="nonwp">
-    <h2>Platforms I Work With</h2>
-    <p>I specialize in WordPress and Elementor. That’s where I can diagnose issues quickly and give accurate fixes. If your site uses another platform, it’s better to work with someone who focuses on that system.</p>
-  </section>
+      <!-- Contact form  -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/yourFormID" method="POST">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" required />
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <form action="https://formspree.io/f/yourFormID" method="POST">
-      <label for="name">Name</label>
-      <input id="name" type="text" name="name" required>
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" required />
 
-      <label for="email">Email</label>
-      <input id="email" type="email" name="email" required>
+          <label for="website">Website URL</label>
+          <input id="website" type="url" name="website" required />
 
-      <label for="website">Website URL</label>
-      <input id="website" type="url" name="website" required>
+          <label for="message">What issue are you experiencing?</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-      <label for="message">What issue are you experiencing?</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
 
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    <!-- Footer  -->
+    <footer>
+      <p class="copyright">© 2026 Spiridon Konofaos</p>
+    </footer>
 
-  <footer>
-    <p>© 2026 Spiridon Konofaos</p>
-  </footer>
+    <!-- JavaScript files -->
+    <script>
 
-</body>
+      // Live copyright year 
+      const copyright = new Date();
+      copyright.getFullYear();
+      
+    </script>
+  </body>
 </html>
