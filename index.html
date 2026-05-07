@@ -9,73 +9,85 @@
   </head>
   <body>
     <header>
-      <h1>Spiridon Konofaos</h1>
-      <p class="subtitle">WordPress Diagnostics & Small Fixes</p>
+      <div class="logo">
+        <span>Spiridon Konofaos</span>
+      </div>
+      <nav>
+        <ul>
+          <li>Home</li>
+          <li>Services</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
     </header>
 
     <main>
       <!-- Hero section  -->
-      <div id="hero">
-        <section id="intro">
-          <p>
+      <section id="hero">
+        <h1 class="page__heading">WordPress Diagnostics & Small Fixes</h1>
+        <h3 class="page__heading">Spiridon Konofaos</h3>
+        <div id="intro">
+          <p class="intro__text">
             If your WordPress site feels slow, looks off, or something just
             isn’t working right, I help you figure out what’s going on — and fix
             it without the drama. Clear communication, steady pace, no
             upselling.
           </p>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- Diagnostics  -->
       <section id="services">
         <h2>Services & Pricing</h2>
-        <div class="service">
-          <h3>Website Diagnostic — $50</h3>
-        <div class="icon-wrapper">
-          <svg class="icon">
-            <use href="/icons/icons.svg#radar"></use>
-          </svg>
-        </div>
-          <p>
-            I take a close look at your WordPress setup and pinpoint the issue.
-            You’ll get a simple, plain‑English summary and your options. You’re
-            never pressured to hire me for the fix.
-          </p>
-        </div>
 
-        <!-- Small fixes  -->
-        <div class="service">
-          <div class="icon-wrapper">
-            <svg class="icon">
-              <use href="/icons/icons.svg#wrench"></use>
-            </svg>
-          </div>
-          <h3>Small Fixes — $75–$150</h3>
-          <p>
-            Good for layout glitches, broken sections, mobile issues, plugin
-            settings, and small styling adjustments.
-          </p>
-        </div>
+        <div class="service__grid">
+          <article class="service">
+            <div class="service__icon-wrapper">
+              <svg class="icon">
+                <use href="/icons/icons.svg#radar"></use>
+              </svg>
+            </div>
+            <h3 class="service__heading">Website Diagnostic — $50</h3>
+            <p class="service__text">
+              I take a close look at your WordPress setup and pinpoint the
+              issue. You’ll get a simple, plain‑English summary and your
+              options. You’re never pressured to hire me for the fix.
+            </p>
+          </article>
 
-        <!-- Medium fixes  -->
-        <div class="service">
-          <div class="icon-wrapper">
-            <svg class="icon">
-              <use href="/icons/icons.svg#settings"></use>
-            </svg>
-          </div>
+          <!-- Small fixes  -->
+          <article class="service">
+            <div class="service__icon-wrapper">
+              <svg class="icon">
+                <use href="/icons/icons.svg#wrench"></use>
+              </svg>
+            </div>
+            <h3 class="service__heading">Small Fixes — $75–$150</h3>
+            <p class="service__text">
+              Good for layout glitches, broken sections, mobile issues, plugin
+              settings, and small styling adjustments.
+            </p>
+          </article>
 
-          <h3>Medium Fixes — $150–$300</h3>
-          <p>
-            For homepage cleanup, multiple section fixes, speed improvements,
-            plugin conflicts, and general front‑end polish.
-          </p>
+          <!-- Medium fixes  -->
+          <article class="service">
+            <div class="service__icon-wrapper">
+              <svg class="icon">
+                <use href="/icons/icons.svg#settings"></use>
+              </svg>
+            </div>
+            <h3 class="service__heading">Medium Fixes — $150–$300</h3>
+            <p class="service__text">
+              For homepage cleanup, multiple section fixes, speed improvements,
+              plugin conflicts, and general front‑end polish.
+            </p>
+          </article>
         </div>
       </section>
 
       <!-- Process  -->
       <section id="process">
-        <h2>How It Works</h2>
+        <h2 class="process__heading">How It Works</h2>
         <ol>
           <li>You send me your website and describe the issue.</li>
           <li>I review everything and send you a diagnostic.</li>
@@ -86,7 +98,7 @@
 
       <!-- Communication -->
       <section id="communication">
-        <h2>Communication</h2>
+        <h2 class="communication__heading">Communication</h2>
         <p>
           I work through email only. It keeps everything clear, organized, and
           distraction‑free.
@@ -95,8 +107,8 @@
 
       <!-- Platforms I work with  -->
       <section id="nonwp">
-        <h2>Platforms I Work With</h2>
-        <p>
+        <h2 class="nonwp__heading">Platforms I Work With</h2>
+        <p class="nonwp__text">
           I specialize in WordPress and Elementor. That’s where I can diagnose
           issues quickly and give accurate fixes. If your site uses another
           platform, it’s better to work with someone who focuses on that system.
@@ -105,7 +117,7 @@
 
       <!-- Contact form  -->
       <section id="contact">
-        <h2>Contact</h2>
+        <h2 class="contact__heading">Contact</h2>
         <form action="https://formspree.io/f/yourFormID" method="POST">
           <label for="name">Name</label>
           <input id="name" type="text" name="name" required />
@@ -131,11 +143,9 @@
 
     <!-- JavaScript files -->
     <script>
-
-      // Live copyright year 
+      // Live copyright year
       const copyright = new Date();
       copyright.getFullYear();
-      
     </script>
   </body>
 </html>

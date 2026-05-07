@@ -1,42 +1,83 @@
-body {
-  font-family: system-ui, sans-serif;
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* color-scheme: light; */
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-family: Geist;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg);
+  line-height: var(--space-3);    /* 24px */
+  letter-spacing: .5px;
+}
+
+section {
+  margin-block: var(--space-8); /* 64px top/bottom */
+  padding-block: var(--space-9)
+}
+
+h1, h2, h3 {
+  line-height: var(--space-5);
+}
+
+p {
+  line-height: var(--space-3); /* 24px */
+  max-width: 65ch;
 }
 
 header {
   text-align: center;
-  padding: 64px;
   background-color: var(--primary-color);
-}
+  width: 100%;
+  height: auto;
+  display: flex;
 
-.subtitle {
-  font-size: 1.2rem;
-  font-size: clamp(2rem, 8vw, 3rem);
-  color: var(--text-color);
-}
+  .logo {
+    justify-self: flex-start;
+  }
 
+  nav {
+    background-color: var(--surface);
+    display: flex;
+    justify-content: end;
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      li {
+        text-decoration: none;
+      }
+    }
+  }
+}
 main {
+  padding-inline: var(--space-8); /* 64px */
 }
 
-section {
-  max-width: 700px;
-  margin: 0 auto; 
-}
+#services {
 
-h2 {
-  margin-bottom: 1rem;
-}
+  .service__grid {
+    display: flex;
+    gap: var(--space-3);
+    border: 1px solid var(--border-color);
 
-.service {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  border: 1px solid #eee;
+    .service {
+      /* background: #fff;÷ */
+      padding: 1.5rem;
+      border-radius: 6px;
+      border: 1px solid #eee;
+    }
+  }
 }
 
 form {
@@ -75,7 +116,7 @@ footer {
   font-size: 0.9rem;
 }
 
-.icon-wrapper {
+.service__icon-wrapper {
   width: 64px;
   height: 64px;
   background: var(--muted-teal); /* or a light gray-blue */
@@ -91,4 +132,3 @@ footer {
   height: 32px;
   fill: black;
 }
-
