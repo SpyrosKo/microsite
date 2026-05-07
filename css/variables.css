@@ -10,6 +10,9 @@
     --space-8: 64px;
     --space-9: 72px;
     --space-10: 80px;
+
+    /* Breakout */
+    --breakout: calc(var(--space-8) * -1);
   
     /* Background layers */
     --bg: #ffffff;
@@ -22,7 +25,7 @@
     --text-muted: #555555;
   
     /* Accent */
-    --accent: bisque;
+    --accent: rgb(255, 228, 196);
     --accent-hover: #e6b88c;
   
     /* Borders */

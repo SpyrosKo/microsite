@@ -8,6 +8,8 @@
 
 html {
   /* color-scheme: light; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -16,16 +18,18 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--bg);
-  line-height: var(--space-3);    /* 24px */
-  letter-spacing: .5px;
+  line-height: var(--space-3); /* 24px */
+  letter-spacing: 0.5px;
 }
 
 section {
   margin-block: var(--space-8); /* 64px top/bottom */
-  padding-block: var(--space-9)
+  padding-block: var(--space-9);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: var(--space-5);
 }
 
@@ -34,49 +38,97 @@ p {
   max-width: 65ch;
 }
 
+button {
+  padding: 0.8rem;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: start;
+  margin-block: 1rem;
+}
+
+button:hover {
+  background: #000;
+}
+
 header {
-  text-align: center;
   background-color: var(--primary-color);
   width: 100%;
   height: auto;
   display: flex;
+  justify-content: space-between;
+  padding-inline: var(--space-8);
+  background-color: var(--surface);
+  align-items: center;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.6); /* or var(--surface) */
+  padding-block: var(--space-5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
 
-  .logo {
-    justify-self: flex-start;
-  }
+}
 
-  nav {
-    background-color: var(--surface);
+.logo {
+  justify-self: start;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+
+  ul {
+    list-style: none;
     display: flex;
-    justify-content: end;
-
-    ul {
-      list-style: none;
-      display: flex;
-
-      li {
+    li {
+      text-decoration: none;
+      padding-inline-start: var(--space-3);
+      a {
+        /* background-color: var(--accent); */
+        padding: .5rem 1rem;
         text-decoration: none;
+      }
+
+      a:hover {
+        background-color: rgba(255, 228, 196, .4);
+        border-radius: 2rem;
       }
     }
   }
 }
+
 main {
   padding-inline: var(--space-8); /* 64px */
+  background-color: aqua;
+  
+  #hero {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1); /* or whatever rhythm you want */
+    background-color: greenyellow;
+  }
 }
 
-#services {
-
-  .service__grid {
+.services {
+  .services__grid {
     display: flex;
     gap: var(--space-3);
-    border: 1px solid var(--border-color);
 
     .service {
       /* background: #fff;÷ */
       padding: 1.5rem;
       border-radius: 6px;
-      border: 1px solid #eee;
+      border-block: 1px solid #eee;
+      border-inline: 1px solid #eee;
+      box-shadow: var(--shadow-sm);
     }
+
+    .service__price {}
   }
 }
 
@@ -93,20 +145,6 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
-}
-
-button {
-  padding: 0.8rem;
-  background: #222;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-button:hover {
-  background: #000;
 }
 
 footer {
