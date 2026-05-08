@@ -23,8 +23,7 @@ body {
 }
 
 section {
-  margin-block: var(--space-8); /* 64px top/bottom */
-  padding-block: var(--space-9);
+  padding-block: var(--space-10);
 }
 
 h1,
@@ -40,6 +39,7 @@ p {
 
 button {
   padding: 0.8rem;
+  margin-block: 24px;
   background: #222;
   color: #fff;
   border: none;
@@ -71,7 +71,6 @@ header {
   padding-block: var(--space-5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   background: color-mix(in srgb, var(--surface) 70%, transparent);
-
 }
 
 .logo {
@@ -85,36 +84,43 @@ nav {
   ul {
     list-style: none;
     display: flex;
+
     li {
       text-decoration: none;
       padding-inline-start: var(--space-3);
+
       a {
         /* background-color: var(--accent); */
-        padding: .5rem 1rem;
+        padding: 0.5rem 1rem;
         text-decoration: none;
       }
 
       a:hover {
-        background-color: rgba(255, 228, 196, .4);
+        background-color: rgba(255, 228, 196, 0.4);
         border-radius: 2rem;
       }
     }
   }
 }
 
+/* Main  */
 main {
-  padding-inline: var(--space-8); /* 64px */
-  background-color: aqua;
-  
-  #hero {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-1); /* or whatever rhythm you want */
-    background-color: greenyellow;
-  }
+  /* background-color: aqua; */
 }
 
+/* Hero */
+#hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1); /* or whatever rhythm you want */
+  /* background-color: greenyellow; */
+  padding-inline: var(--space-8); /* 64px */
+}
+
+/* Services  */
 .services {
+  padding-inline: var(--space-8); /* 64px */
+
   .services__grid {
     display: flex;
     gap: var(--space-3);
@@ -128,10 +134,76 @@ main {
       box-shadow: var(--shadow-sm);
     }
 
-    .service__price {}
+    .service__price {
+    }
   }
 }
 
+.cta-btn {
+  display: flex;
+  padding: 0.8rem 1.2rem;
+  background: #222;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: end;
+
+
+  padding: 0.8rem;
+  margin-block: 24px;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  align-self: start;
+  margin-block: 1rem;
+  width: fit-content;
+}
+
+
+/* Service Icons  */
+.service__icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: var(--muted-teal); /* or a light gray-blue */
+  border-radius: 16px; /* soft rounded square */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: black;
+}
+
+/* Process  */
+.process {
+  padding-inline: var(--space-8); /* 64px */
+}
+
+/* Communication  */
+.communication {
+  padding-inline: var(--space-8); /* 64px */
+}
+
+/* Platforms I work with  */
+.nonwp {
+  padding-inline: var(--space-8); /* 64px */
+}
+
+/* Contact form  */
+
+#contact {
+  width: 500px;
+  margin: auto;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -152,21 +224,4 @@ footer {
   padding: 2rem;
   color: var(--text-color);
   font-size: 0.9rem;
-}
-
-.service__icon-wrapper {
-  width: 64px;
-  height: 64px;
-  background: var(--muted-teal); /* or a light gray-blue */
-  border-radius: 16px; /* soft rounded square */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.icon {
-  width: 32px;
-  height: 32px;
-  fill: black;
 }
