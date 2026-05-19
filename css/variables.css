@@ -1,87 +1,106 @@
 :root {
-    /* Spacing  */
-    --space-1: 8px;
-    --space-2: 16px;
-    --space-3: 24px;
-    --space-4: 32px;
-    --space-5: 40px;
-    --space-6: 48px;
-    --space-7: 56px;
-    --space-8: 64px;
-    --space-9: 72px;
-    --space-10: 80px;
+  /* Spacing  */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-7: 56px;
+  --space-8: 64px;
+  --space-9: 72px;
+  --space-10: 80px;
 
-    /* Breakout */
-    --breakout: calc(var(--space-8) * -1);
-  
-    /* Background layers */
-    --bg: #ffffff;
-    --bg-alt: 222;
-    --surface: hsl(240, 67%, 94%);
-    --surface-alt: #f7f7f7;
-  
-    /* Text */
-    --text-color: #222222;
-    --text-muted: #555555;
-  
-    /* Accent */
-    --accent: rgb(255, 228, 196);
-    --accent-hover: #e6b88c;
-  
-    /* Borders */
-    --border-color: #e5e5e5;
-  
-    /* Radius  */
-    --radius: 10px;
-  
-    /* Shadows */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.06);
-  
-    /* Inputs */
-    --input-border: 1px solid var(--border-color);
-    --input-focus-outline-color: violet;
-    --input-focus: 2px solid var(--input-focus-outline-color);
-  
-    /* Motion */
-    --transition: all 150ms ease-out;
-  }
-  
-  /* ----------------------------------------------------------
+  /* Breakout */
+  --breakout: calc(var(--space-8) * -1);
+
+  /* Background layers */
+  --bg-alt: 222;
+
+  --text-alt: #f5f0e8;
+
+  --bg: #f5f0e8; /* warm cream - page background */
+  --bg-alt: #2a2a2a;
+  --surface: #ede7dc; /* slightly darker cream - cards/containers */
+  --surface-alt: #e5ded2; /* even slightly darker - hover states */
+  --text: #2a2a2a; /* soft charcoal - body text */
+  --accent: #c85a3e; /* rust/terracotta - CTAs, links */
+
+  /* Text */
+  --text-color: #222222;
+  --text-muted: #555555;
+
+  /* Accent */
+  --accent: rgb(255, 228, 196);
+  --accent-hover: #e6b88c;
+
+  /* Borders */
+  --border-color: #e5e5e5;
+
+  /* Radius  */
+  --radius: 10px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+  /* Inputs */
+  --input-border: 1px solid var(--border-color);
+  --input-focus-outline-color: violet;
+  --input-focus: 2px solid var(--input-focus-outline-color);
+
+  /* Motion */
+  --transition: all 150ms ease-out;
+}
+
+/* ----------------------------------------------------------
      DARK MODE OVERRIDE (correct placement)
   ---------------------------------------------------------- */
-  
-  @media (prefers-color-scheme: dark) {
-    :root {
-      /* Background layers */
-      /* --bg: #0f0f0f;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Background layers */
+    /* --bg: #0f0f0f;
       --surface: #1a1a1a;
       --surface-alt: #222222; */
-  
-      /* Text */
-      /* --text-color: #e6e6e6;
+
+    /* Text */
+    /* --text-color: #e6e6e6;
       --text-muted: #aaaaaa;
    */
-      /* Accent */
-      /* --accent: bisque;
+    /* Accent */
+    /* --accent: bisque;
       --accent-hover: #e6b88c; */
-  
-      /* Borders */
-      /* --border-color: #333333; */
-  
-      /* Shadows */
-      /* --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+
+    /* Borders */
+    /* --border-color: #333333; */
+
+    /* Shadows */
+    /* --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
       --shadow-md: 0 2px 6px rgba(0, 0, 0, 0.7); */
-  
-      /* Inputs */
-      /* --input-border: 1px solid var(--border-color);
+
+    /* Inputs */
+    /* --input-border: 1px solid var(--border-color);
       --input-focus-outline-color: bisque;
       --input-focus: 2px solid var(--input-focus-outline-color); */
-    }
   }
-  
-  /* Fonts custom */
-  @font-face {
-    font-family: Geist;
-    src: url(/fonts/Geist-VariableFont_wght.ttf);
-  }
+}
+
+/* Fonts custom */
+@font-face {
+  font-family: Geist;
+  src: url(/fonts/Geist-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(/fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+/* Primary: A warm cream or off-white instead of pure white — like an old Macintosh bezel or a well-worn paperback page. (#F5F0E8 or similar)
+
+Dark: A soft charcoal, not pure black. Think CRT-screen-off gray-black. (#2A2A2A)
+
+Accent: A muted, slightly warm tone — like the orange in a sunset from a 90s photo, or the warm amber of a desk lamp. Something like a burnt orange / rust (#C85A3E) or a warm terracotta (#D4785C).
+
+Secondary accent (optional): A desaturated teal or slate blue — like 90s software UI but washed out. Think Windows 95 teal but gentle. (#4A7C7A or #5B7B8A) */

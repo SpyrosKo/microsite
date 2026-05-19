@@ -13,17 +13,21 @@ html {
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  font-family: Geist;
+  font-family: Geist, system-ui, sans-serif;
   line-height: 1.6;
   color: var(--text-color);
-  background-color: var(--bg);
+  background-color: #F5F0E8;
+
   line-height: var(--space-3); /* 24px */
   letter-spacing: 0.5px;
 }
 
 section {
   padding-block: var(--space-10);
+}
+section:nth-of-type(even) {
+  background-color: #2A2A2A;
+  color: var(--text-alt);
 }
 
 h1,
@@ -40,8 +44,8 @@ p {
 button {
   padding: 0.8rem;
   margin-block: 24px;
-  background: #222;
-  color: #fff;
+  background: var(--bg-alt);
+  color: var(--text-alt);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -55,26 +59,27 @@ button:hover {
 }
 
 header {
-  background-color: var(--primary-color);
   width: 100%;
-  height: auto;
   display: flex;
   justify-content: space-between;
   padding-inline: var(--space-8);
-  background-color: var(--surface);
   align-items: center;
   position: sticky;
   top: 0;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  background: rgba(255, 255, 255, 0.6); /* or var(--surface) */
-  padding-block: var(--space-5);
+  padding-block: var(--space-9);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  background: color-mix(in srgb, var(--surface) 80%, transparent);
+  z-index: 100;
 }
 
 .logo {
   justify-self: start;
+  .name {
+    font-family: SpaceGrotesk;
+    text-transform: uppercase;
+  }
 }
 
 nav {
@@ -93,6 +98,8 @@ nav {
         /* background-color: var(--accent); */
         padding: 0.5rem 1rem;
         text-decoration: none;
+        text-transform: uppercase;
+        color: #000;
       }
 
       a:hover {
@@ -104,17 +111,14 @@ nav {
 }
 
 /* Main  */
-main {
-  /* background-color: aqua; */
-}
 
 /* Hero */
 #hero {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1); /* or whatever rhythm you want */
-  /* background-color: greenyellow; */
+  gap: var(--space-2); /* or whatever rhythm you want */
   padding-inline: var(--space-8); /* 64px */
+  height: 70vh;
 }
 
 /* Services  */
@@ -126,15 +130,16 @@ main {
     gap: var(--space-3);
 
     .service {
-      /* background: #fff;÷ */
       padding: 1.5rem;
       border-radius: 6px;
       border-block: 1px solid #eee;
       border-inline: 1px solid #eee;
       box-shadow: var(--shadow-sm);
+      color: var(--text-alt);
     }
 
-    .service__price {
+    .service__price, .service__heading, .service__price {
+      color: var(--text-alt);
     }
   }
 }
@@ -148,20 +153,11 @@ main {
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
-  align-self: end;
-
-
-  padding: 0.8rem;
-  margin-block: 24px;
-  background: #222;
-  color: #fff;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
   align-self: start;
-  margin-block: 1rem;
   width: fit-content;
+  margin-block-start: 1rem;
 }
 
 
